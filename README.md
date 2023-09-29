@@ -28,7 +28,7 @@ Ensure the following dependencies are already fulfilled on your host Linux/Windo
 2. Re-run the following command, until all 3 “mongod” pods (and their containers) have been successfully started (“Status=Running”; usually takes a minute or two).
 
     ```
-    $ kubectl get all
+    $ microk8s kubectl get all
     ```
 
 3. Execute the following script which connects to the first Mongod instance running in a container of the Kubernetes StatefulSet, via the Mongo Shell, to (1) initialise the MongoDB Replica Set, and (2) create a MongoDB admin user (specify the password you want as the argument to the script, replacing 'abc123').
