@@ -19,6 +19,9 @@ metadata:
 spec:
   serviceName: mongodb-service
   replicas: 3
+  selector:
+    matchLabels:
+      role: mongo
   template:
     metadata:
       labels:
@@ -85,4 +88,3 @@ spec:
       resources:
         requests:
           storage: 1Gi
-
